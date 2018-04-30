@@ -1,5 +1,6 @@
 package com.udacity.googleindiascholarships.ui;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -19,6 +20,7 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.amulyakhare.textdrawable.TextDrawable;
+import com.google.firebase.auth.FirebaseAuth;
 import com.udacity.googleindiascholarships.R;
 import com.udacity.googleindiascholarships.challenges.ui.ChallengesFragment;
 import com.udacity.googleindiascholarships.community.ui.CommunityFragment;
@@ -69,6 +71,15 @@ public class MainActivity extends AppCompatActivity
         });
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
+        if(firebaseAuth.getCurrentUser()==null){
+            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+            startActivity(intent);
+        }
+    }
     private void setIvNavHeader(String text) {
 
         TextDrawable drawable = TextDrawable

@@ -40,8 +40,6 @@
 
     <string name="profile_short_description_sample">"Hi! My name is Vineeth Reddy, I’m a passionate Android developer and I enjoy creating apps that create an impact in the world. Contact me at vineethreddy@gmail.com"</string>
 
-<<<<<<< HEAD
-=======
     <string name="profile_skills_sample">XML , ANDROID , FIREBASE , UI , ADOBE </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -138,6 +136,6 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
+    <string name="title_activity_create_project">CreateProjectActivity</string>
 
->>>>>>> upstream/master
 </resources>

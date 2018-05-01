@@ -36,19 +36,24 @@
 
         <activity
             android:name=".members.ui.Phase1Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".members.ui.Phase2Activity"
-            android:theme="@style/AppTheme.NoActionBar"/>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".members.ui.ProfileActivity"
-            android:theme="@style/AppTheme.NoActionBar"/>
-     
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".projects.ui.ProjectDetails"
             android:label="@string/title_activity_project_details"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
-      
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:parentActivityName=".ui.MainActivity"
+            android:name=".projects.ui.CreateProjectActivity"
+            android:label="@string/title_activity_create_project"
+            android:theme="@style/AppTheme.NoActionBar">
+
+        </activity>
     </application>
 
 </manifest>

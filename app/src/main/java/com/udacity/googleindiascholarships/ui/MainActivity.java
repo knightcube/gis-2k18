@@ -2,7 +2,9 @@ package com.udacity.googleindiascholarships.ui;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.design.widget.AppBarLayout;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
@@ -136,6 +138,21 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    // Sets the shadow for Toolbar and AppBarLayout
+    private void setToolbarShadow(int id){
+        AppBarLayout appBar = findViewById(R.id.appBar);
+
+        if (Build.VERSION.SDK_INT>=Build.VERSION_CODES.LOLLIPOP) {
+            // If Community section is opened, the AppBarLayout should have no shadows
+            // to prevent shadow overlapping with TabLayout
+            if (id == R.id.nav_community) {
+                appBar.setElevation(0);
+            } else {
+                appBar.setElevation(6);
+            }
+        }
+    }
+
     private void displaySelectedScreen(int id){
 
         Fragment fragment = null ;
@@ -170,6 +187,8 @@ public class MainActivity extends AppCompatActivity
             ft.replace(R.id.content_main, fragment).addToBackStack(null);
             ft.commit();
         }
+
+        setToolbarShadow(id);
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

@@ -51,7 +51,7 @@ public class CreateProjectActivity extends AppCompatActivity {
                 }else{
                     progressBar.setVisibility(View.VISIBLE);
                     Project currentProject = new Project(projectNameTxt.getText().toString(),projectDescriptionTxt.getText().toString(),projectLogoTxt.getText().toString(),projectGithubUrlTxt.getText().toString());
-                    saveToFirebase(currentProject);
+                    saveProjectToFirebase(currentProject);
 
                 }
             }
@@ -59,7 +59,7 @@ public class CreateProjectActivity extends AppCompatActivity {
 
     }
 
-    private void saveToFirebase(Project currentProject) {
+    private void saveProjectToFirebase(Project currentProject) {
 
         FirebaseDatabase database = FirebaseDatabase.getInstance("https://gis-2k18.firebaseio.com");
         DatabaseReference mProjectsRef = database.getReference();

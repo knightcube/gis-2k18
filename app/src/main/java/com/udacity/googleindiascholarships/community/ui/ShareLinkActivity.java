@@ -69,11 +69,6 @@ public class ShareLinkActivity extends AppCompatActivity {
                 }
             }
         });
-<<<<<<< HEAD
-=======
-
-
->>>>>>> upstream/master
     }
 
     private void saveLinkToFirebase(ExternalLinks currentLink) {

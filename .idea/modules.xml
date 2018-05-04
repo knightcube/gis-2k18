@@ -3,13 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-<<<<<<< HEAD
-      <module fileurl="file://C:\Users\Anurag\AndroidStudioProjects\Scholarship\Forked\gis-2k18\app\app.iml" filepath="C:\Users\Anurag\AndroidStudioProjects\Scholarship\Forked\gis-2k18\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/gis-2k18.iml" filepath="$PROJECT_DIR$/gis-2k18.iml" />
-      <module fileurl="file://C:\Users\Anurag\AndroidStudioProjects\Scholarship\Forked\gis-2k18\gis-2k18.iml" filepath="C:\Users\Anurag\AndroidStudioProjects\Scholarship\Forked\gis-2k18\gis-2k18.iml" />
-=======
-      <module fileurl="file://$PROJECT_DIR$/gis-2k18.iml" filepath="$PROJECT_DIR$/gis-2k18.iml" />
->>>>>>> upstream/master
     </modules>
   </component>
 </project>

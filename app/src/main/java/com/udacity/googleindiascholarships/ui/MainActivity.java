@@ -87,17 +87,29 @@ public class MainActivity extends AppCompatActivity
     protected void onStart() {
         super.onStart();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 //        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 //        if(firebaseAuth.getCurrentUser()==null){
 //            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
 //            startActivity(intent);
 //        }
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> upstream/master
 //         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 //         if(firebaseAuth.getCurrentUser()==null){
 //             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
 //             startActivity(intent);
 //         }
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
+
 >>>>>>> upstream/master
     }
     private void setIvNavHeader(String text) {

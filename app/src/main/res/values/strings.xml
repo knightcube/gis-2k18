@@ -40,7 +40,6 @@
 
     <string name="profile_short_description_sample">"Hi! My name is Vineeth Reddy, I’m a passionate Android developer and I enjoy creating apps that create an impact in the world. Contact me at vineethreddy@gmail.com"</string>
 
-
     <string name="profile_skills_sample">XML , ANDROID , FIREBASE , UI , ADOBE </string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
@@ -140,5 +139,29 @@
     <string name="title_activity_create_project">CreateProjectActivity</string>
     <string name="title_activity_share_link">ShareLinkActivity</string>
     <string name="default_description">Sample Description</string>
+<<<<<<< HEAD
+=======
+
+    <string name="project_github_url">Project Github Url</string>
+    <string name="project_name">Project Name</string>
+    <string name="project_logo_url">Project Logo Url</string>
+    <string name="project_description">Project Description</string>
+    <string name="title_activity_challenges_details">ChallengesDetails</string>
+    <string name="text_user_name">Vineeth Reddy</string>
+    <string name="About">About</string>
+
+    <!--Setting's Preference string resources-->
+    <string name="pref_notification_title">Get Notifications</string>
+    <string name="pref_notification_key">notifications</string>
+    <string name="pref_notification_summary_on">Enabled</string>
+    <string name="pref_notification_summary_off">Disabled</string>
+
+    <string name="pref_dialog_title">Are you sure ?</string>
+    <string name="pref_dialog_content">This will sign you out from device.</string>
+    <string name="pref_dialog_positive_btn_text">Yes</string>
+    <string name="pref_dialog_title_label">Sign Out</string>
+    <string name="pref_dialog_negative_btn_text">No</string>
+    <string name="pref_dialog_key">custom_sign_out_pref_dialog</string>
+>>>>>>> upstream/master
 
 </resources>

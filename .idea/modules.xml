@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/gis-2k18.iml" filepath="$PROJECT_DIR$/gis-2k18.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/gis-2k18 main.iml" filepath="$PROJECT_DIR$/gis-2k18 main.iml" />
+>>>>>>> upstream/master
     </modules>
   </component>
 </project>

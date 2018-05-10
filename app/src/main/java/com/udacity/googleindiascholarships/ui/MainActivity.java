@@ -1,7 +1,6 @@
 package com.udacity.googleindiascholarships.ui;
 
 import android.content.Intent;
-import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -23,10 +22,10 @@ import android.widget.ImageView;
 import android.widget.Spinner;
 
 import com.amulyakhare.textdrawable.TextDrawable;
-import com.google.firebase.auth.FirebaseAuth;
 import com.udacity.googleindiascholarships.R;
 import com.udacity.googleindiascholarships.challenges.ui.ChallengesFragment;
 import com.udacity.googleindiascholarships.community.ui.CommunityFragment;
+import com.udacity.googleindiascholarships.currentuser.ui.UserDetailsActivity;
 import com.udacity.googleindiascholarships.members.ui.MembersFragment;
 import com.udacity.googleindiascholarships.projects.ui.ProjectsFragment;
 import com.udacity.googleindiascholarships.quizzes.ui.QuizzesFragment;
@@ -87,17 +86,29 @@ public class MainActivity extends AppCompatActivity
     protected void onStart() {
         super.onStart();
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+
+>>>>>>> upstream/master
 //        FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 //        if(firebaseAuth.getCurrentUser()==null){
 //            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
 //            startActivity(intent);
 //        }
+<<<<<<< HEAD
 =======
+=======
+
+>>>>>>> upstream/master
 //         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
 //         if(firebaseAuth.getCurrentUser()==null){
 //             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
 //             startActivity(intent);
 //         }
+<<<<<<< HEAD
+>>>>>>> upstream/master
+=======
+
 >>>>>>> upstream/master
     }
     private void setIvNavHeader(String text) {
@@ -129,7 +140,9 @@ public class MainActivity extends AppCompatActivity
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
-        return true;
+        // Returning false so that the menu doesn't get inflated as the Settings are been implemented
+        // through Navigation menu
+        return false;
     }
 
     @Override
@@ -194,6 +207,11 @@ public class MainActivity extends AppCompatActivity
                 break;
             case R.id.nav_community:
                 fragment = new CommunityFragment();
+                break;
+            case R.id.nav_user_profile:
+                Intent profileActivityIntent = new Intent(this, UserDetailsActivity.class);
+
+                startActivity(profileActivityIntent);
                 break;
             case R.id.nav_settings:
                 fragment = new SettingsFragment();

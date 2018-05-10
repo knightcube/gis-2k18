@@ -69,8 +69,6 @@ public class ShareLinkActivity extends AppCompatActivity {
                 }
             }
         });
-
-
     }
 
     private void saveLinkToFirebase(ExternalLinks currentLink) {

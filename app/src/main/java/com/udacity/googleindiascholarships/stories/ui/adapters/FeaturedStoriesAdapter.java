@@ -43,20 +43,13 @@ public class FeaturedStoriesAdapter extends RecyclerView.Adapter<FeaturedStories
 
     @Override
     public void onBindViewHolder(FeaturedStoriesViewHolder holder, int position) {
-        Random random = new Random();
 
         final ExternalLinks currentExternalLink = mLinkItems.get(position);
 
         holder.featuredStoryProfileNameText.setText(currentExternalLink.getLinkPostedBy());
-<<<<<<< HEAD
-<<<<<<< HEAD
         holder.featuredStoryTitleText.setText(currentExternalLink.getLinkUrl());
-=======
         holder.featuredStoryTitleText.setText(currentExternalLink.getLinkDescription());
->>>>>>> upstream/master
-=======
         holder.featuredStoryTitleText.setText(currentExternalLink.getLinkDescription());
->>>>>>> adding_link_preview
         holder.featuredStoryReadText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

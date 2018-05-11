@@ -25,10 +25,7 @@ import com.udacity.googleindiascholarships.projects.entities.Project;
 import com.udacity.googleindiascholarships.utils.Constants;
 
 import java.util.ArrayList;
-<<<<<<< HEAD
-=======
 import java.util.List;
->>>>>>> upstream/master
 
 public class ProjectsFragment extends android.support.v4.app.Fragment {
 
@@ -36,10 +33,6 @@ public class ProjectsFragment extends android.support.v4.app.Fragment {
 
 
     RecyclerView projectsRecyclerView;
-<<<<<<< HEAD
-    ArrayList<Project> projectList;
-    FloatingActionButton createProjectBtn;
-=======
     List<Project> projectList;
     ProjectsAdapter projectsAdapter;
     FloatingActionButton createProjectBtn;
@@ -48,7 +41,6 @@ public class ProjectsFragment extends android.support.v4.app.Fragment {
     FirebaseDatabase mFirebaseDatabase;
     DatabaseReference mFirebaseDatabaseReference;
 
->>>>>>> upstream/master
 
     @Nullable
     @Override
@@ -58,7 +50,6 @@ public class ProjectsFragment extends android.support.v4.app.Fragment {
 
         projectsRecyclerView = rootView.findViewById(R.id.projectsRecyclerView);
         createProjectBtn = rootView.findViewById(R.id.create_projects_fab_btn);
-<<<<<<< HEAD
         projectsRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
         createProjectBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,8 +59,6 @@ public class ProjectsFragment extends android.support.v4.app.Fragment {
             }
         });
 
-=======
->>>>>>> upstream/master
         projectList = new ArrayList<Project>();
         projectsRecyclerView.setLayoutManager(new GridLayoutManager(getActivity(),2));
         createProjectBtn.setOnClickListener(new View.OnClickListener() {

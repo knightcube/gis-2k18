@@ -39,7 +39,7 @@ public class BlogAdapter extends RecyclerView.Adapter<BlogAdapter.LinkPreviewVie
     public void onBindViewHolder(LinkPreviewViewHolder holder, int position) {
         final ExternalLinks currentExternalLink = mLinkItems.get(position);
         holder.previewLinkText.setText(currentExternalLink.getLinkUrl());
-        holder.previewLinkPostedBy.setText(currentExternalLink.getLinkPostedBy());
+//        holder.previewLinkPostedBy.setText(currentExternalLink.getLinkPostedBy());
         holder.previewLinkDescription.setText(currentExternalLink.getLinkDescription());
         holder.previewLinkOpenInBrowser.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -127,6 +127,7 @@ public class ShareLinkActivity extends AppCompatActivity {
                         public void onFailure(@NonNull Exception e) {
                             progressBar.setVisibility(View.GONE);
                             Log.i(TAG, "onFailure: " + e.getMessage());
+<<<<<<< HEAD
                             Toast.makeText(ShareLinkActivity.this, "Could not be saved.Check your internet connection", Toast.LENGTH_SHORT).show();
                         }
 
@@ -147,6 +148,8 @@ public class ShareLinkActivity extends AppCompatActivity {
                         public void onFailure(@NonNull Exception e) {
                             progressBar.setVisibility(View.GONE);
                             Log.i(TAG, "onFailure: " + e.getMessage());
+=======
+>>>>>>> upstream/master
                             Toast.makeText(ShareLinkActivity.this, "Could not be saved.Check your internet connection", Toast.LENGTH_SHORT).show();
                         }
 

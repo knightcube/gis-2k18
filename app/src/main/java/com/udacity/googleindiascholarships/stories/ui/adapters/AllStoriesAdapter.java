@@ -14,10 +14,6 @@ import com.udacity.googleindiascholarships.community.ui.entities.ExternalLinks;
 
 import java.util.List;
 
-/**
- * Created by vinee_000 on 20-04-2018.
- */
-
 public class AllStoriesAdapter extends RecyclerView.Adapter<AllStoriesAdapter.AllStoriesViewHolder>{
     public Context mContext;
     public List<ExternalLinks> mLinkItems;
@@ -40,15 +36,7 @@ public class AllStoriesAdapter extends RecyclerView.Adapter<AllStoriesAdapter.Al
     public void onBindViewHolder(AllStoriesViewHolder holder, int position) {
         final ExternalLinks currentExternalLink = mLinkItems.get(position);
         holder.storyProfileNameText.setText(currentExternalLink.getLinkPostedBy());
-<<<<<<< HEAD
-<<<<<<< HEAD
-        holder.storyTitleText.setText(currentExternalLink.getLinkUrl());
-=======
         holder.storyTitleText.setText(currentExternalLink.getLinkDescription());
->>>>>>> upstream/master
-=======
-        holder.storyTitleText.setText(currentExternalLink.getLinkDescription());
->>>>>>> adding_link_preview
         holder.storyReadText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -64,8 +64,7 @@ public class ShareLinkActivity extends AppCompatActivity {
                     Toast.makeText(ShareLinkActivity.this, "Please provide all details", Toast.LENGTH_SHORT).show();
                 } else {
                     progressBar.setVisibility(View.VISIBLE);
-                    ExternalLinks currentLink = new ExternalLinks(linkUrlTxt.getText().toString(), linkSharedByTxt.getText().toString());
-                    saveLinkToFirebase(currentLink);
+
                     if (TextUtils.isEmpty(linkUrlTxt.getText()) || TextUtils.isEmpty(linkSharedByTxt.getText()) || TextUtils.isEmpty(linkType)) {
                         Toast.makeText(ShareLinkActivity.this, "Please provide all details", Toast.LENGTH_SHORT).show();
                     } else {

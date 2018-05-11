@@ -59,11 +59,11 @@ public class ShareLinkActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 linkType = dropdown.getSelectedItem().toString();
-                if (TextUtils.isEmpty(linkUrlTxt.getText()) ||  TextUtils.isEmpty(linkDescriptionTxt.getText()) || TextUtils.isEmpty(linkType)) {
+                if (TextUtils.isEmpty(linkUrlTxt.getText()) ||  TextUtils.isEmpty(linkSharedByTxt.getText()) || TextUtils.isEmpty(linkDescriptionTxt.getText()) || TextUtils.isEmpty(linkType)) {
                     Toast.makeText(ShareLinkActivity.this, "Please provide all details", Toast.LENGTH_SHORT).show();
                 } else {
                     progressBar.setVisibility(View.VISIBLE);
-                    ExternalLinks currentLink = new ExternalLinks(linkUrlTxt.getText().toString(), linkDescriptionTxt.getText().toString());
+                    ExternalLinks currentLink = new ExternalLinks(linkUrlTxt.getText().toString(),linkSharedByTxt.getText().toString(), linkDescriptionTxt.getText().toString());
                     saveLinkToFirebase(currentLink);
 
                 }

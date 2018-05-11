@@ -51,7 +51,7 @@ public class ShareLinkActivity extends AppCompatActivity {
         linkUrlTxt = (EditText) findViewById(R.id.link_url);
         linkSharedByTxt = (EditText) findViewById(R.id.link_shared_by);
         dropdown = (Spinner) findViewById(R.id.blog_or_resources_spinner);
-        String[] items = new String[]{"Blog", "Resource"};
+        String[] items = new String[]{"Blog", "Resource", "Story"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, items);
         dropdown.setAdapter(adapter);
         saveToFirebaseBtn = (Button) findViewById(R.id.save_to_firebase_btn);
@@ -71,6 +71,7 @@ public class ShareLinkActivity extends AppCompatActivity {
                     } else {
                         progressBar.setVisibility(View.VISIBLE);
                         TextCrawler textCrawler = new TextCrawler();
+
                         textCrawler.makePreview(new LinkPreviewCallback() {
                             @Override
                             public void onPre() {
@@ -89,7 +90,6 @@ public class ShareLinkActivity extends AppCompatActivity {
                                 }
                             }
                         }, linkUrlTxt.getText().toString());
-
 
                     }
                 }
@@ -119,8 +119,28 @@ public class ShareLinkActivity extends AppCompatActivity {
                             Toast.makeText(ShareLinkActivity.this, "Could not be saved.Check your internet connection", Toast.LENGTH_SHORT).show();
                         }
                     });
-        } else {
+        } else if (linkType.equalsIgnoreCase("resource")) {
             mExternalResourcesRef.child("external_resources").child("resources").push().setValue(currentLink)
+                    .addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            progressBar.setVisibility(View.GONE);
+                            Toast.makeText(ShareLinkActivity.this, "Details saved", Toast.LENGTH_SHORT).show();
+                            finish();
+                        }
+                    })
+                    .addOnFailureListener(new OnFailureListener() {
+                        @Override
+                        public void onFailure(@NonNull Exception e) {
+                            progressBar.setVisibility(View.GONE);
+                            Log.i(TAG, "onFailure: " + e.getMessage());
+                            Toast.makeText(ShareLinkActivity.this, "Could not be saved.Check your internet connection", Toast.LENGTH_SHORT).show();
+                        }
+
+                    });
+
+        } else if (linkType.equalsIgnoreCase("story")) {
+            mExternalResourcesRef.child("stories").push().setValue(currentLink)
                     .addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {

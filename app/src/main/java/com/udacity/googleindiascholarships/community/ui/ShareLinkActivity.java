@@ -64,32 +64,32 @@ public class ShareLinkActivity extends AppCompatActivity {
                     Toast.makeText(ShareLinkActivity.this, "Please provide all details", Toast.LENGTH_SHORT).show();
                 } else {
                     progressBar.setVisibility(View.VISIBLE);
-
                     TextCrawler textCrawler = new TextCrawler();
 
-                    textCrawler.makePreview(new LinkPreviewCallback() {
-                        @Override
-                        public void onPre() {
-                            progressBar.setVisibility(View.VISIBLE);
-                        }
-
-                        @Override
-                        public void onPos(SourceContent sourceContent, boolean b) {
-                            if (!sourceContent.isSuccess()) {
-                                progressBar.setVisibility(View.GONE);
-                                Toast.makeText(ShareLinkActivity.this, "Please Check your internet connection", Toast.LENGTH_SHORT).show();
-                            } else {
-                                ExternalLinks currentLink = new ExternalLinks(linkUrlTxt.getText().toString(), linkSharedByTxt.getText().toString(), sourceContent.getTitle());
-                                saveLinkToFirebase(currentLink);
-                                progressBar.setVisibility(View.GONE);
+                        textCrawler.makePreview(new LinkPreviewCallback() {
+                            @Override
+                            public void onPre() {
+                                progressBar.setVisibility(View.VISIBLE);
                             }
-                        }
-                    }, linkUrlTxt.getText().toString());
 
+                            @Override
+
+                            public void onPos(SourceContent sourceContent, boolean b) {
+                                if (!sourceContent.isSuccess()) {
+                                    progressBar.setVisibility(View.GONE);
+                                    Toast.makeText(ShareLinkActivity.this, "Please Check your internet connection", Toast.LENGTH_SHORT).show();
+                                } else {
+                                    ExternalLinks currentLink = new ExternalLinks(linkUrlTxt.getText().toString(), linkSharedByTxt.getText().toString(), sourceContent.getTitle());
+                                    saveLinkToFirebase(currentLink);
+                                    progressBar.setVisibility(View.GONE);
+                                }
+                            }
+                        }, linkUrlTxt.getText().toString());
+
+                    }
                 }
-            }
-        });
-    }
+            });
+        }
 
 
     private void saveLinkToFirebase(ExternalLinks currentLink) {

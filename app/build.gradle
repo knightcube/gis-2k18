@@ -40,12 +40,9 @@ dependencies {
     implementation 'com.android.support.constraint:constraint-layout:1.1.0'
     implementation 'com.android.support:support-v4:26.1.0'
     implementation 'com.google.firebase:firebase-database:11.8.0'
-<<<<<<< HEAD
 
-=======
     implementation 'org.jsoup:jsoup:1.8.3' // required
     implementation 'com.leocardz:link-preview:2.0.0@aar'
->>>>>>> upstream/master
     implementation 'de.hdodenhof:circleimageview:2.2.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'

@@ -67,7 +67,7 @@ public class StoriesFragment extends android.support.v4.app.Fragment{
     private void readFeaturedStoriesFromFirebase() {
         FirebaseDatabase database = FirebaseDatabase.getInstance(Constants.DATABASE_URL);
         DatabaseReference mExternalResourcesRef = database.getReference("external_resources")
-                .child("blogs");
+                .child("stories");
         mExternalResourcesRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
@@ -91,7 +91,7 @@ public class StoriesFragment extends android.support.v4.app.Fragment{
     private void readAllStoriesFromFirebase() {
         FirebaseDatabase database = FirebaseDatabase.getInstance(Constants.DATABASE_URL);
         DatabaseReference mExternalResourcesRef = database.getReference("external_resources")
-                .child("blogs");
+                .child("stories");
         mExternalResourcesRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {

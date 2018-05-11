@@ -9,6 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.leocardz.link.preview.library.LinkPreviewCallback;
+import com.leocardz.link.preview.library.SourceContent;
+import com.leocardz.link.preview.library.TextCrawler;
 import com.udacity.googleindiascholarships.R;
 import com.udacity.googleindiascholarships.community.ui.entities.ExternalLinks;
 
@@ -40,7 +43,7 @@ public class FeaturedStoriesAdapter extends RecyclerView.Adapter<FeaturedStories
     public void onBindViewHolder(FeaturedStoriesViewHolder holder, int position) {
         final ExternalLinks currentExternalLink = mLinkItems.get(position);
         holder.featuredStoryProfileNameText.setText(currentExternalLink.getLinkPostedBy());
-        holder.featuredStoryTitleText.setText(currentExternalLink.getLinkUrl());
+        holder.featuredStoryTitleText.setText(currentExternalLink.getLinkDescription());
         holder.featuredStoryReadText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,6 +52,7 @@ public class FeaturedStoriesAdapter extends RecyclerView.Adapter<FeaturedStories
             }
         });
     }
+
 
     @Override
     public int getItemCount() {

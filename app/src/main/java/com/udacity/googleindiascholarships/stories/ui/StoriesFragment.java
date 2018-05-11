@@ -55,7 +55,6 @@ public class StoriesFragment extends android.support.v4.app.Fragment{
         featuredStoriesAdapter = new FeaturedStoriesAdapter(getContext(),allStoriesLinks,numberOfFeaturedStories);
         rvFeaturedStories.setAdapter(featuredStoriesAdapter);
 
-
         llmAllStories = new LinearLayoutManager(getContext(),LinearLayoutManager.VERTICAL,false);
         rvAllStories.setLayoutManager(llmAllStories);
 

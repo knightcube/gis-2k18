@@ -40,7 +40,11 @@ public class AllStoriesAdapter extends RecyclerView.Adapter<AllStoriesAdapter.Al
     public void onBindViewHolder(AllStoriesViewHolder holder, int position) {
         final ExternalLinks currentExternalLink = mLinkItems.get(position);
         holder.storyProfileNameText.setText(currentExternalLink.getLinkPostedBy());
+<<<<<<< HEAD
         holder.storyTitleText.setText(currentExternalLink.getLinkUrl());
+=======
+        holder.storyTitleText.setText(currentExternalLink.getLinkDescription());
+>>>>>>> upstream/master
         holder.storyReadText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

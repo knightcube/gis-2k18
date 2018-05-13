@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
 import com.udacity.googleindiascholarships.R;
 import com.udacity.googleindiascholarships.projects.entities.Project;
 import com.udacity.googleindiascholarships.projects.ui.ProjectDetails;
@@ -37,8 +38,9 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
     @Override
     public void onBindViewHolder(final ProjectsCardViewHolder holder, int position) {
         final Project listItem = mListItems.get(position);
-        holder.projectNameTextView.setText(listItem.getName());
-        holder.projectImageView.setImageResource(listItem.getPlaceHolderImage());
+        holder.projectNameTextView.setText(listItem.getProject_name());
+        //holder.projectImageView.setImageResource(listItem.getPlaceHolderImage());
+        Picasso.with(mContext).load(listItem.getProject_logo_url()).into(holder.projectImageView);
 
     }
 
@@ -66,10 +68,16 @@ public class ProjectsAdapter extends RecyclerView.Adapter<ProjectsAdapter.Projec
                     Context context = view.getContext();
                     int position = getAdapterPosition();
                     Intent intent = new Intent(view.getContext(), ProjectDetails.class);
+                    intent.putExtra("project_github_url",mListItems.get(position).getProject_github_url());
+                    intent.putExtra("project_description",mListItems.get(position).getProject_description());
+                    intent.putExtra("project_logo_url",mListItems.get(position).getProject_logo_url());
+                    intent.putExtra("project_name",mListItems.get(position).getProject_name());
+                    intent.putExtra("project_status",mListItems.get(position).getProject_status());
                     context.startActivity(intent);
 
                 }
             });
+
 
 
         }

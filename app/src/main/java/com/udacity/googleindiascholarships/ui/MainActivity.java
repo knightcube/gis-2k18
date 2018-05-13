@@ -96,11 +96,6 @@ public class MainActivity extends AppCompatActivity
 //            Intent intent = new Intent(MainActivity.this, LoginActivity.class);
 //            startActivity(intent);
 //        }
-//         FirebaseAuth firebaseAuth = FirebaseAuth.getInstance();
-//         if(firebaseAuth.getCurrentUser()==null){
-//             Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-//             startActivity(intent);
-//         }
     }
     private void setIvNavHeader(String text) {
 
